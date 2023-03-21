@@ -1,0 +1,28 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /onlinetest
+
+spring:
+  mvc:
+    static-path-pattern: res/**
+  web:
+    resources:
+      static-locations: classpath:/res/
+  profiles:
+    active: default
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: ********
+    username: *********
+    password: *********
+    druid:
+      stat-view-servlet:
+        enabled: true
+        login-username: admin
+        login-password: admin
+        reset-enable: false
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
